@@ -4,6 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/x__x73/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/button_next_subscribe.xml" value="0.36354166666666665" />
+        <entry key="app/src/main/res/drawable/button_subscribe.xml" value="0.36354166666666665" />
+        <entry key="app/src/main/res/drawable/button_subscribe_cancel.xml" value="0.36354166666666665" />
+        <entry key="app/src/main/res/drawable/ic_baseline_help_outline.xml" value="0.36354166666666665" />
+        <entry key="app/src/main/res/drawable/ic_baseline_menu.xml" value="0.36354166666666665" />
+        <entry key="app/src/main/res/drawable/ic_baseline_notifications.xml" value="0.36354166666666665" />
+        <entry key="app/src/main/res/drawable/rectangle_ticket.xml" value="0.36354166666666665" />
+        <entry key="app/src/main/res/drawable/rectangle_ticket_dotted_line.xml" value="0.36354166666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main_details.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main_detail_toolbar.xml" value="0.19270833333333334" />
