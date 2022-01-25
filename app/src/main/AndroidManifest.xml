@@ -13,9 +13,6 @@
             android:name=".alarmSet"
             android:exported="false" />
         <activity
-            android:name=".SecondAcitivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

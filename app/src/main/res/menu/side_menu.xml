@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_login"
+            android:title="로그인"
+            android:icon="@drawable/ic_baseline_notifications_red"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:title="로그아웃"
+            android:icon="@drawable/ic_baseline_notifications_red"/>
+    </group>
+
+        <item
+            android:title="커뮤니티">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_netflixTalk"
+                    android:title="넷플릭스"/>
+                <item
+                    android:id="@+id/nav_watchaTalk"
+                    android:title="왓챠"/>
+                <item
+                    android:id="@+id/nav_disneyPlusTalk"
+                    android:title="디즈니 플러스"/>
+                <item
+                    android:id="@+id/nav_youtubePremiumTalk"
+                    android:title="유튜브 프리미엄"/>
+                </group>
+            </menu>
+        </item>
+
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_alarmSet"
+            android:title="알림설정"
+            android:icon="@drawable/ic_baseline_notifications_red"/>
+        <item
+            android:id="@+id/nav_environmentSet"
+            android:title="환경설정"
+            android:icon="@drawable/ic_baseline_notifications_red"/>
+        <item
+            android:id="@+id/nav_subscribeInfo"
+            android:title="구독정보"
+            android:icon="@drawable/ic_baseline_notifications_red"/>
+        <item
+            android:id="@+id/nav_moneyBook"
+            android:title="가계부"
+            android:icon="@drawable/ic_baseline_notifications_red"/>
+        <item
+            android:id="@+id/nav_complain"
+            android:title="고객센터"
+            android:icon="@drawable/ic_baseline_notifications_red"/>
+    </group>
+</menu>
