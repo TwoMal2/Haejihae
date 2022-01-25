@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--타이틀 바-->
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_baseline_arrow_back"
+            android:tint="#C30941" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 구독"
+            android:textColor="#C30941"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btn_help"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_baseline_help_outline"
+            android:tint="#C30941" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--티켓 이미지-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_ticket">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/rectangle_ticket_dotted_line"
+            android:orientation="vertical">
+
+
+            <!--구독 서비스 이름-->
+
+            <TextView
+                android:id="@+id/tv_service_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Name"
+                android:textColor="#C30941"
+                android:textSize="50sp" />
+
+            <!--구독 서비스 이미지-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="#C30941" />
+
+            <ImageView
+                android:id="@+id/img_service"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_baseline_notifications" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="#C30941" />
+
+            <!--구독 날짜 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_marginStart="40dp"
+                        android:text="구독일"
+                        android:textColor="#C30941"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn_subscribe_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/button_subscribe"
+                        android:text="Date"
+                        android:textColor="#C30941"
+                        android:textSize="18sp" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_marginStart="40dp"
+                        android:text="다음 결제일"
+                        android:textColor="#C30941"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn_next_subscribe_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="40dp"
+                        android:background="@drawable/button_next_subscribe"
+                        android:text="Date"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--해지 신청-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_subscribe_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_subscribe_cancel"
+                    android:text="해지 신청"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="해지해"
+                    android:textColor="#C30741"
+                    android:textSize="15sp" />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
