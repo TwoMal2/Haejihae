@@ -3,7 +3,7 @@
     <!-- Unchecked -->
     <item android:state_checked="false">
         <shape>
-            <stroke android:color="#c30941" android:width="1.5dp" />
+            <stroke android:color="#c30941" android:width="2dp" />
             <corners android:radius="4dp" />
         </shape>
     </item>
@@ -14,11 +14,11 @@
             <item>
                 <shape>
                     <corners android:radius="4dp" />
-                    <solid android:color="#c30941" />
+                    <solid android:color="@color/white" />
+                    <stroke android:color="#c30941" android:width="2dp" />
                 </shape>
             </item>
-            <item android:drawable="@drawable/ic_baseline_check"
-                android:top="1dp" android:right="1dp" android:bottom="1dp" android:left="1dp" />
+            <item android:drawable="@drawable/ic_baseline_check" />
         </layer-list>
     </item>
 </selector>

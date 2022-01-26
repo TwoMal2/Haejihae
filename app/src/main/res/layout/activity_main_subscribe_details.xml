@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MainSubscribeDetailsActivity">
 
     <!--타이틀 바-->
-
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/main_details_toolbar"
@@ -58,7 +59,7 @@
             <!--구독 서비스 이름-->
 
             <TextView
-                android:id="@+id/tv_service_name"
+                android:id="@+id/tv_service_name_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
