@@ -16,9 +16,14 @@
         app:headerLayout="@layout/profile_header"
         app:menu="@menu/side_menu"
         android:layout_gravity="start" />
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <!--세로 선-->
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -30,6 +35,118 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/ic_baseline_menu_red" />
-    </ScrollView>
+            app:navigationIcon="@drawable/ic_baseline_menu_red"
+            android:tint="#C30941" >
+
+            <ImageButton
+                android:id="@+id/btn_notifications"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_baseline_notifications"
+                android:tint="#C30941" />
+
+            <!--수정 예정, 임시 배치-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:text="해지해"
+                android:textColor="#C30941"
+                android:textSize="20sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#C30941" />
+
+        <!--구독 편집-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+
+            <!-- 구독 추가 / 삭제 버튼-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginStart="30dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="10dp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/ic_baseline_add"
+                    android:tint="#C30941" />
+
+                <ImageButton
+                    android:id="@+id/btn_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/ic_baseline_remove"
+                    android:tint="#C30941" />
+
+            </LinearLayout>
+
+            <!--정렬 버튼-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="정렬 기준"
+                    android:textColor="#C30941"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down"
+                    app:tint="#C30941" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <!--구독 이미지 표시 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.drawerlayout.widget.DrawerLayout>
