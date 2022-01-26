@@ -6,25 +6,41 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+    ArrayList<SubscribeItems> myData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        /*
+        myData = new ArrayList<>();
+        addItem("Netflix","2022/02/08","31");
+        addItem("Waave","2012/03/13","1");
+
+        RecyclerView recyclerView = findViewById(R.id.rv_subscribe_items);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+        SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData);
+        recyclerView.setAdapter(adapter);*/
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -43,8 +59,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
-
         navigationView.setCheckedItem(R.id.nav_subscribeInfo);
+
 
     }
 
@@ -72,4 +88,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void addItem(String name, String date, String dday){
+        SubscribeItems item = new SubscribeItems();
+
+        item.setName(name);
+        item.setDate(date);
+        item.setDday(dday);
+        myData.add(item);
+    }
+
 }

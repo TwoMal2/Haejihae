@@ -4,55 +4,105 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--타이틀바-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_baseline_menu"
+            android:tint="#C30941" />
+
+        <ImageButton
+            android:id="@+id/btn_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_baseline_notifications"
+            android:tint="#C30941" />
+
+
+        <!--수정 예정, 임시 배치-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:text="해지해"
+            android:textColor="#C30941"
+            android:textSize="20sp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--세로 선-->
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="#C30941" />
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+        android:layout_height="match_parent">
 
-        <CheckBox
-            android:id="@+id/checkbox_remove"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
             android:layout_marginStart="20dp"
-            android:layout_gravity="start"
-            android:button="@android:color/transparent"
-            android:background="@drawable/checkbox_subscribe_remove"
-            android:checked="true" />
-
-        <View
-            android:layout_width="100dp"
-            android:layout_height="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_gravity="end|center"
-            android:background="#FF7870"/>
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_subscribe_remove_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <!--버튼 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom|end"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_subscribe_information_remove"
+                android:text="취소"
+                android:textColor="#5F1E31"
+                android:textSize="15sp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/button_subscribe_information_remove"
+                android:text="삭제하기"
+                android:textColor="#5F1E31"
+                android:textSize="15sp" />
+
+        </LinearLayout>
 
     </FrameLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/button_subscribe_information_remove"
-            android:text="취소"
-            android:textColor="#5F1E31"
-            android:textSize="15sp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:background="@drawable/button_subscribe_information_remove"
-            android:text="삭제하기"
-            android:textColor="#5F1E31"
-            android:textSize="15sp" />
-
-
-    </LinearLayout>
-
 
 </LinearLayout>
