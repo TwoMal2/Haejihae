@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/nav_subscribeInfo">
+
+    <fragment
+        android:id="@+id/nav_subscribeInfo"
+        android:name="com.example.haejihae.SubscribeInfoFragment"
+        android:label="activity_subscribe_main"
+        tools:layout="@layout/fragment_subscribe_info" />
+
+    <fragment
+        android:id="@+id/nav_alarmSet"
+        android:name="com.example.haejihae.alarmSetFragment"
+        android:label="activity_alarm_set"
+        tools:layout="@layout/fragment_alarm_set" />
+</navigation>
