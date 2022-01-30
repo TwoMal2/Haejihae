@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainSubscribeDetailsActivity">
 
@@ -13,13 +15,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
+        <ImageView
+            android:id="@+id/iv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:background="@color/white"
+            android:layout_gravity="start"
+            android:layout_marginEnd="20dp"
+            android:background="#00FFFFFF"
             android:src="@drawable/ic_baseline_arrow_back"
-            android:tint="#C30941" />
+            app:tint="#C30941" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,15 +32,15 @@
             android:textColor="#C30941"
             android:textSize="20sp" />
 
-        <ImageButton
-            android:id="@+id/btn_help"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+        <ImageView
+            android:id="@+id/iv_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginEnd="20dp"
             android:background="#00FFFFFF"
             android:src="@drawable/ic_baseline_help_outline"
-            android:tint="#C30941" />
+            app:tint="#C30941" />
 
     </androidx.appcompat.widget.Toolbar>
 

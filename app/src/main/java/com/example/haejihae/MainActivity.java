@@ -15,12 +15,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Button;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -38,9 +40,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_main);
 
-        /*
+        //아이템 추가 , 데이터베이스 연동 예정
         myData = new ArrayList<>();
         addItem("Netflix","2022/02/08","31");
         addItem("Waave","2012/03/13","1");
@@ -48,17 +50,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         RecyclerView recyclerView = findViewById(R.id.rv_subscribe_items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
-        SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData);
-        recyclerView.setAdapter(adapter);*/
+        SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData, this);
+        recyclerView.setAdapter(adapter);
 
 
-        /*drawerLayout = findViewById(R.id.drawer_layout);
-
-        drawerLayout = findViewById(R.id.drawer_layout);
+        /*DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
-        toolbar = findViewById(R.id.toolbar);
 
+        //툴바 설정
+        toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_menu_red);
+
 
         //로그인 로그아웃 둘 중 하나는 숨기기
         Menu menu = navigationView.getMenu();
@@ -74,41 +80,56 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setCheckedItem(R.id.nav_subscribeInfo);
         */
 
-        final DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-
-        findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener(){
+        drawerLayout = findViewById(R.id.drawer_layout);
+        findViewById(R.id.iv_menu).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
 
-        NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
-        NavigationUI.setupWithNavController(navigationView, navController);
+        //NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
+        //NavigationUI.setupWithNavController(navigationView, navController);
 
-        findViewById(R.id.btn_notifications).setOnClickListener(new View.OnClickListener(){
+        findViewById(R.id.iv_notifications).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(),alarmSet.class);
                 startActivity(intent);
             }
+        });
 
+        ImageButton btn_add = findViewById(R.id.btn_add);
+        ImageButton btn_remove = findViewById(R.id.btn_remove);
+        btn_remove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainSubscribeDetailsActivity.class);
+                startActivity(intent);
+            }
         });
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     public void itemAddClick(View v){
         Intent intent = new Intent(this, Items_addActivity.class);
         intent.putExtra("data","Test Popup");
         startActivityForResult(intent, 1);
     }
-
-
-
 
     @Override
     public void onBackPressed() {

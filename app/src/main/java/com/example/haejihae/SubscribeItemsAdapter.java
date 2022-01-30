@@ -1,6 +1,7 @@
 package com.example.haejihae;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 
 public class SubscribeItemsAdapter extends RecyclerView.Adapter<SubscribeItemsAdapter.ViewHolder> {
     private ArrayList<SubscribeItems> myData;
+    private Context mContext;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_service_name, tv_date, tv_dday;
@@ -23,11 +25,25 @@ public class SubscribeItemsAdapter extends RecyclerView.Adapter<SubscribeItemsAd
             tv_service_name=itemView.findViewById(R.id.tv_service_name);
             tv_date=itemView.findViewById(R.id.tv_date);
             tv_dday=itemView.findViewById(R.id.tv_dday);
+
+            itemView.setClickable(true);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    if(position!=RecyclerView.NO_POSITION){
+                        Intent intent = new Intent(mContext, MainSubscribeDetailsActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        //intent.putExtra("TEXT", myData.get(position));
+                        mContext.startActivity(intent);
+                    }
+                }
+            });
         }
     }
 
-    SubscribeItemsAdapter(ArrayList<SubscribeItems> myData){
+    SubscribeItemsAdapter(ArrayList<SubscribeItems> myData, Context mContext){
         this.myData = myData;
+        this.mContext = mContext;
     }
 
     @NonNull
