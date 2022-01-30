@@ -84,6 +84,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        findViewById(R.id.btn_notifications).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(),alarmSet.class);
+                startActivity(intent);
+            }
+
+        });
+
 
 
 
