@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Toolbar toolbar;
     ArrayList<SubscribeItems> myData;
+
+    ImageButton itemAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         /*drawerLayout = findViewById(R.id.drawer_layout);
+
+        drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
 
@@ -93,11 +98,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         });
 
-
-
-
-
     }
+
+
+    public void itemAddClick(View v){
+        Intent intent = new Intent(this, Items_addActivity.class);
+        intent.putExtra("data","Test Popup");
+        startActivityForResult(intent, 1);
+    }
+
+
+
 
     @Override
     public void onBackPressed() {

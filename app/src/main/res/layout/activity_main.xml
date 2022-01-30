@@ -75,12 +75,13 @@
             <ImageButton
                 android:id="@+id/btn_add"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:layout_marginEnd="10dp"
                 android:background="#00FFFFFF"
                 android:src="@drawable/ic_baseline_add"
-                android:tint="#C30941" />
+                android:tint="#C30941"
+                android:onClick="itemAddClick"/>
 
             <ImageButton
                 android:id="@+id/btn_remove"
