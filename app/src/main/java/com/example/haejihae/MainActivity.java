@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
@@ -79,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_subscribeInfo);
         */
-
+        //툴바 클릭
         drawerLayout = findViewById(R.id.drawer_layout);
         findViewById(R.id.iv_menu).setOnClickListener(new View.OnClickListener(){
             @Override
@@ -101,13 +103,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        // + - 버튼 클릭
         ImageButton btn_add = findViewById(R.id.btn_add);
+
         ImageButton btn_remove = findViewById(R.id.btn_remove);
         btn_remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainSubscribeDetailsActivity.class);
-                startActivity(intent);
+
+                SubscribeItemsRemoveAdapter adapter = new SubscribeItemsRemoveAdapter(myData);
+                recyclerView.setAdapter(adapter);
+
+                findViewById(R.id.btn_remove_remove).setVisibility(View.VISIBLE);
+                findViewById(R.id.btn_remove_back).setVisibility(View.VISIBLE);
+
+                /*
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                SubscribeInfoRemoveFragment subscribeInfoRemoveFragment = new SubscribeInfoRemoveFragment();
+                transaction.replace(R.id.layout_subscribe, subscribeInfoRemoveFragment);
+                transaction.commit();*/
+            }
+        });
+
+        findViewById(R.id.btn_remove_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData, getApplicationContext());
+                recyclerView.setAdapter(adapter);
+
+                findViewById(R.id.btn_remove_remove).setVisibility(View.INVISIBLE);
+                findViewById(R.id.btn_remove_back).setVisibility(View.INVISIBLE);
             }
         });
 

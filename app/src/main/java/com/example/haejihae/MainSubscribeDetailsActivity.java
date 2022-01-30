@@ -16,24 +16,11 @@ import java.util.ArrayList;
 
 public class MainSubscribeDetailsActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-    ArrayList<SubscribeItems> myData;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_subscribe_details);
-
-/*
-        myData = new ArrayList<>();
-        addItem("Netflix","2022/02/08","D-31");
-        addItem("Waave","2012/03/13","D-1");
-
-        RecyclerView recyclerView = findViewById(R.id.rv_subscribe_remove_items);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
-        SubscribeItemsRemoveAdapter adapter = new SubscribeItemsRemoveAdapter(myData);
-        recyclerView.setAdapter(adapter);*/
 
         findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,15 +33,6 @@ public class MainSubscribeDetailsActivity extends AppCompatActivity {
 
     }
 
-
-    public void addItem(String name, String date, String dday){
-        SubscribeItems item = new SubscribeItems();
-
-        item.setName(name);
-        item.setDate(date);
-        item.setDday(dday);
-        myData.add(item);
-    }
 
 
 }

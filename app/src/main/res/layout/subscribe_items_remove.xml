@@ -22,7 +22,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="280dp"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/rectangle_subscribe_item_dotted_line"
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|end"
-                    android:layout_marginStart="60dp"
+                    android:layout_marginStart="50dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
