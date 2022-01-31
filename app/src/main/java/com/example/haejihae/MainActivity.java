@@ -1,30 +1,20 @@
 package com.example.haejihae;
 
-import static androidx.navigation.ui.NavigationUI.*;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
-import android.widget.Button;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -44,6 +34,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+
+        //로그인 로그아웃 둘 중 하나는 숨기기
+        Menu menu = navigationView.getMenu();
+        menu.findItem(R.id.nav_logout).setVisible(false);
+
+        // 네비게이션 drawer 메뉴
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_subscribeInfo);
+
         //아이템 추가 , 데이터베이스 연동 예정
         myData = new ArrayList<>();
         addItem("Netflix","2022/02/08","31");
@@ -55,32 +60,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData, this);
         recyclerView.setAdapter(adapter);
 
-
-        /*DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-
-        //툴바 설정
-        toolbar = findViewById(R.id.main_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_baseline_menu_red);
-
-
-        //로그인 로그아웃 둘 중 하나는 숨기기
-        Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_logout).setVisible(false);
-
-
-        navigationView.bringToFront();
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_subscribeInfo);
-        */
         //툴바 클릭
         drawerLayout = findViewById(R.id.drawer_layout);
         findViewById(R.id.iv_menu).setOnClickListener(new View.OnClickListener(){
@@ -89,16 +68,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-        navigationView = findViewById(R.id.nav_view);
-        navigationView.setItemIconTintList(null);
-
-        //NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
-        //NavigationUI.setupWithNavController(navigationView, navController);
 
         findViewById(R.id.iv_notifications).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(),alarmSet.class);
+                Intent intent = new Intent(getApplicationContext(), AlarmSet.class);
                 startActivity(intent);
             }
         });
@@ -172,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_subscribeInfo:
                 break;
             case R.id.nav_alarmSet:
-                Intent intent = new Intent(MainActivity.this, alarmSet.class);
+                Intent intent = new Intent(MainActivity.this, AlarmSet.class);
                 startActivity(intent);
                 break;
         }

@@ -3,43 +3,57 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/button_item_add_close.xml" value="0.2625" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/button_login.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/button_next_subscribe.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/button_subscribe.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/button_subscribe_cancel.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/edittext_rounded_corner_rectangle.xml" value="0.262037037037037" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/ic_baseline_add.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/ic_baseline_arrow_back.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/ic_baseline_help_outline.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/ic_baseline_menu.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/ic_baseline_notifications.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/ic_launcher_background.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/rectangle_subscribe_item.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/rectangle_ticket.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/rectangle_ticket_dotted_line.xml" value="0.29635416666666664" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_alarm_set.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_items_add.xml" value="0.25" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_loading.xml" value="0.25" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_main_details.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_main_subscribe_details.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_menu.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_subscribe_information_remove.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_welcome.xml" value="0.22" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/fragment_subscribe_info.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/profile_header.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/subscribe_items.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/subscribe_items_remove.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/menu/main_details_toolbar.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/menu/main_toolbar.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.378125" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.378125" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_alarm_set.xml" value="0.1328125" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_loading.xml" value="0.15208333333333332" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_login.xml" value="0.15208333333333332" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_menu.xml" value="0.15208333333333332" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_subscribe_main.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_welcome.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/layout/fragment_alarm_set.xml" value="0.1328125" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/layout/fragment_subscribe_info.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/menu/main_details_toolbar.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/menu/main_toolbar.xml" value="0.15885416666666666" />
         <entry key="..\:/Users/x__x73/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/button_next_subscribe.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/button_subscribe.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/button_subscribe_cancel.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/button_subscribe_information_remove.xml" value="0.35648148148148145" />
-        <entry key="app/src/main/res/drawable/button_subsribe_information_remove.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/checkbox_subscribe_remove.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/ic_baseline_add.xml" value="0.1895" />
-        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back.xml" value="0.1895" />
-        <entry key="app/src/main/res/drawable/ic_baseline_check.xml" value="0.35648148148148145" />
-        <entry key="app/src/main/res/drawable/ic_baseline_help_outline.xml" value="0.165" />
-        <entry key="app/src/main/res/drawable/ic_baseline_menu.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/ic_baseline_menu_red.xml" value="0.1895" />
-        <entry key="app/src/main/res/drawable/ic_baseline_notifications.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/rectangle_check_box.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/rectangle_subscribe_item.xml" value="0.35648148148148145" />
-        <entry key="app/src/main/res/drawable/rectangle_subscribe_item_dotted_line.xml" value="0.35648148148148145" />
-        <entry key="app/src/main/res/drawable/rectangle_ticket.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/drawable/rectangle_ticket_dotted_line.xml" value="0.36354166666666665" />
-        <entry key="app/src/main/res/layout/activity_alarm_set.xml" value="0.27445652173913043" />
-        <entry key="app/src/main/res/layout/activity_items_add.xml" value="0.26811594202898553" />
-        <entry key="app/src/main/res/layout/activity_loading.xml" value="0.26811594202898553" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.26811594202898553" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_main_details.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_main_subscribe_details.xml" value="0.27445652173913043" />
-        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.27445652173913043" />
-        <entry key="app/src/main/res/layout/activity_subscribe_information_remove.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_subscribe_main.xml" value="0.26811594202898553" />
-        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.26811594202898553" />
-        <entry key="app/src/main/res/layout/profile_header.xml" value="0.27445652173913043" />
-        <entry key="app/src/main/res/layout/subscribe_items.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/subscribe_items_remove.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_main_details.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main_detail_toolbar.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/menu/main_details_toolbar.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main_toolbar.xml" value="0.19270833333333334" />
-        <entry key="app/src/main/res/menu/side_menu.xml" value="0.34739583333333335" />
       </map>
     </option>
   </component>

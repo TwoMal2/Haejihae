@@ -2,18 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/nav_viewNN"
     app:startDestination="@id/nav_subscribeInfo">
 
-    <fragment
+    <activity
         android:id="@+id/nav_subscribeInfo"
-        android:name="com.example.haejihae.SubscribeInfoFragment"
+        android:name="com.example.haejihae.SubscribeInfo"
         android:label="activity_subscribe_main"
-        tools:layout="@layout/fragment_subscribe_info" />
+        tools:layout="@layout/activity_subscribe_main" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_alarmSet"
-        android:name="com.example.haejihae.alarmSetFragment"
+        android:name="com.example.haejihae.AlarmSet"
         android:label="activity_alarm_set"
-        tools:layout="@layout/fragment_alarm_set" />
+        tools:layout="@layout/activity_alarm_set" />
 </navigation>
