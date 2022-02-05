@@ -11,21 +11,17 @@
         android:theme="@style/Theme.Haejihae">
         <activity
             android:name=".AlarmSet"
-            android:label="알림설정"
-            android:exported="false" />
+            android:exported="false"
+            android:label="알림설정" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
-
-        <activity android:name=".MainSubscribeDetailsActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".MainSubscribeDetailsActivity"
             android:exported="false" />
-
         <activity
             android:name=".WelcomeActivity"
             android:exported="false" />
-
         <activity
             android:name=".LoadingActivity"
             android:exported="true">
@@ -34,18 +30,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-
-        <!-- 팝업 Activity -->
+        </activity> <!-- 팝업 Activity -->
         <activity
             android:name=".Items_addActivity"
             android:exported="true"
-            android:theme="@android:style/Theme.Dialog">
-
-        </activity>
-
-
+            android:theme="@android:style/Theme.Dialog"></activity>
     </application>
 
 </manifest>

@@ -9,72 +9,78 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-public class AlarmSet extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    DrawerLayout drawerLayout;
-    NavigationView navigationView;
-    Toolbar toolbar;
-
+public class AlarmSet extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_set);
-        drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-
-        //로그인 로그아웃 둘 중 하나는 숨기기
-        Menu menu = navigationView.getMenu();
-        menu.findItem(R.id.nav_logout).setVisible(false);
-
-        // 네비게이션 drawer 메뉴
-        navigationView.bringToFront();
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_subscribeInfo);
-
-        //툴바 클릭
-        drawerLayout = findViewById(R.id.drawer_layout);
-        findViewById(R.id.iv_menu).setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-        });
-
-        findViewById(R.id.iv_notifications).setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), AlarmSet.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.side_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.nav_alarmSet) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+/*
+    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch(menuItem.getItemId()){
-            case R.id.nav_subscribeInfo:
-                Intent intent = new Intent(AlarmSet.this, AlarmSet.class);
-                startActivity(intent);
-                break;
             case R.id.nav_alarmSet:
-
+                break;
+            case R.id.nav_subscribeInfo:
+                Intent intent = new Intent(AlarmSet.this, MainActivity.class);
+                startActivity(intent);
                 break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    @Override
+    public void onBackPressed() {
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                finishAffinity();
+            } else {
+                super.onBackPressed();
+            }
+        }
+    }*/
 }
