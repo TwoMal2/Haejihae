@@ -15,7 +15,7 @@
             android:label="알림설정" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity
             android:name=".MainSubscribeDetailsActivity"
             android:exported="false" />
@@ -34,7 +34,9 @@
         <activity
             android:name=".Items_addActivity"
             android:exported="true"
-            android:theme="@android:style/Theme.Dialog"></activity>
+            android:theme="@android:style/Theme.Dialog"/>
+        <activity android:name=".PopupCalendar"
+            android:theme="@android:style/Theme.Dialog" />
     </application>
 
 </manifest>

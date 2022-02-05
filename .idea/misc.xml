@@ -56,8 +56,20 @@
         <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/menu/main_details_toolbar.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/water/AndroidStudioProjects/Haejihae/app/src/main/res/menu/main_toolbar.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/x__x73/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/button_subscribe_cancel.xml" value="0.171" />
+        <entry key="app/src/main/res/drawable/rectangle_ticket.xml" value="0.171" />
+        <entry key="app/src/main/res/layout/activity_alarm_set.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/activity_calendar.xml" value="0.2259963768115942" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main_subscribe_details.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/activity_subscribe_information_remove.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/activity_subscribe_main.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/fragment_alarm_set_main.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/fragment_sub_scribe_info_main.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/subscribe_items.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/subscribe_items_remove.xml" value="0.16894630192502533" />
         <entry key="app/src/main/res/menu/main_detail_toolbar.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/menu/main_details_toolbar.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main_toolbar.xml" value="0.19270833333333334" />

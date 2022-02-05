@@ -85,7 +85,7 @@
                 android:background="#C30941" />
 
             <ImageView
-                android:id="@+id/img_service"
+                android:id="@+id/iv_service"
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:layout_gravity="center"
@@ -127,8 +127,9 @@
                     <Button
                         android:id="@+id/btn_subscribe_date"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="end|center"
+                        android:padding="10dp"
                         android:layout_marginEnd="40dp"
                         android:background="@drawable/button_subscribe"
                         android:text="Date"
@@ -154,8 +155,9 @@
                     <Button
                         android:id="@+id/btn_next_subscribe_date"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="end|center"
+                        android:padding="10dp"
                         android:layout_marginEnd="40dp"
                         android:background="@drawable/button_next_subscribe"
                         android:text="Date"

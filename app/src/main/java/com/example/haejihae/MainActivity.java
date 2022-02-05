@@ -19,6 +19,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -37,15 +38,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        /*
+/*
+        //아이템 추가, 데이터베이스 연동 예정
         myData = new ArrayList<>();
         addItem("Netflix","2022/02/08","31");
-        addItem("Waave","2012/03/13","1");
+        addItem("Wavve","2012/03/13","1");
 
         RecyclerView recyclerView = findViewById(R.id.rv_subscribe_items);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
-        SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData);
+        SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData,this);
         recyclerView.setAdapter(adapter);*/
 
 
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_subscribeInfo);
         */
+
 
         final DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
 
@@ -93,7 +95,36 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         });
 
+        // - 버튼 클릭
+        ImageButton btn_remove = findViewById(R.id.btn_remove);
+        btn_remove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                SubscribeItemsRemoveAdapter adapter = new SubscribeItemsRemoveAdapter(myData);
+                //recyclerView.setAdapter(adapter);
+
+                findViewById(R.id.btn_remove_remove).setVisibility(View.VISIBLE);
+                findViewById(R.id.btn_remove_back).setVisibility(View.VISIBLE);
+
+                 /*
+                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                 SubscribeInfoRemoveFragment subscribeInfoRemoveFragment = new SubscribeInfoRemoveFragment();
+                 transaction.replace(R.id.layout_subscribe, subscribeInfoRemoveFragment);
+                 transaction.commit();*/
+            }
+        });
+
+        findViewById(R.id.btn_remove_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData, getApplicationContext());
+                //recyclerView.setAdapter(adapter);
+
+                findViewById(R.id.btn_remove_remove).setVisibility(View.INVISIBLE);
+                findViewById(R.id.btn_remove_back).setVisibility(View.INVISIBLE);
+            }
+        });
 
 
 

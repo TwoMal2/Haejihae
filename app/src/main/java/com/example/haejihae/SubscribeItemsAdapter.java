@@ -33,7 +33,10 @@ public class SubscribeItemsAdapter extends RecyclerView.Adapter<SubscribeItemsAd
                     int position = getAdapterPosition();
                     if(position!=RecyclerView.NO_POSITION){
                         Intent intent = new Intent(mContext, MainSubscribeDetailsActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        //intent.putExtra("TEXT", myData.get(position));
+
+                        intent.putExtra("Service name",tv_service_name.getText().toString());
+                        intent.putExtra("Date", tv_date.getText().toString());
+
                         mContext.startActivity(intent);
                     }
                 }
