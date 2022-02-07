@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AlarmSet"
-    android:orientation="vertical"
-    app:defaultNavHost="true"
-    app:navGraph="@navigation/main">
+    android:orientation="vertical">
 
     <!--타이틀바-->
 <!--
@@ -109,9 +107,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_subscribe_items"
         android:layout_width="317dp"
-        android:layout_height="555dp"
-        android:layout_gravity="center">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="267dp"
+        android:layout_gravity="center"></androidx.recyclerview.widget.RecyclerView>
 
     <Button
         android:id="@+id/button2"
@@ -119,25 +116,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:backgroundTint="#C30941"
-        android:capitalize="characters"
         android:text="일괄 설정" />
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="678dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        android:id ="@+id/navHostFragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/main"
-        />
-
-    <com.google.android.material.navigation.NavigationView
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:id="@+id/nav_view"
-        app:headerLayout="@layout/profile_header"
-        app:menu="@menu/side_menu"
-        android:layout_gravity="start" />
 
 </LinearLayout>
