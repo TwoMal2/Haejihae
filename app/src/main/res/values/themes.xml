@@ -12,5 +12,13 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!--날짜 선택-->
+        <item name="android:datePickerDialogTheme">@style/DatePickerDialog</item>
+    </style>
+    <style name="DatePickerDialog">
+        <item name="colorAccent">#FF7870</item>
+        <item name="android:textColor">@color/white</item>
+
     </style>
 </resources>

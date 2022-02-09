@@ -6,11 +6,12 @@ import android.os.PersistableBundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PopupCalendar extends AppCompatActivity {
+public class CancelManualActivity extends AppCompatActivity {
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_subscribe_cancel_manual);
 
     }
 }

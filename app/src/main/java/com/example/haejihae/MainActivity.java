@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //아이템 추가 , 데이터베이스 연동 예정
         myData = new ArrayList<>();
         addItem("Netflix","2022/02/08","31");
-        addItem("Waave","2012/03/13","1");
+        addItem("Wavve","2012/03/13","1");
 
         RecyclerView recyclerView = findViewById(R.id.rv_subscribe_items);
 

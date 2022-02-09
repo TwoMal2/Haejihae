@@ -18,7 +18,7 @@
             android:exported="true"/>
         <activity
             android:name=".MainSubscribeDetailsActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".WelcomeActivity"
             android:exported="false" />
@@ -30,13 +30,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 팝업 Activity -->
+        </activity>
+        <activity android:name=".CancelManualActivity" />
+        <!-- 팝업 Activity -->
         <activity
             android:name=".Items_addActivity"
             android:exported="true"
             android:theme="@android:style/Theme.Dialog"/>
-        <activity android:name=".PopupCalendar"
-            android:theme="@android:style/Theme.Dialog" />
     </application>
 
 </manifest>

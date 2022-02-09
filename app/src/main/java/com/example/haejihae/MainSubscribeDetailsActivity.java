@@ -1,13 +1,17 @@
 package com.example.haejihae;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
@@ -17,6 +21,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainSubscribeDetailsActivity extends AppCompatActivity {
 
@@ -26,11 +32,19 @@ public class MainSubscribeDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_subscribe_details);
 
+        //달력 시간 설정
+        Calendar calendar = Calendar.getInstance();
+        int mYear = calendar.get(Calendar.YEAR);
+        int mMonth = calendar.get(Calendar.MONTH);
+        int mDay = calendar.get(Calendar.DAY_OF_MONTH);
+
+
+        //구독 정보 설정
         Intent intent = getIntent();
 
-        TextView name = findViewById(R.id.tv_service_name_details);
-        ImageView service = findViewById(R.id.iv_service);
-        TextView date = findViewById(R.id.btn_subscribe_date);
+        final TextView name = findViewById(R.id.tv_service_name_details);
+        final ImageView service = findViewById(R.id.iv_service);
+        final Button date = findViewById(R.id.btn_subscribe_date);
 
         String service_name = intent.getStringExtra("Service name");
         if(service_name!=null){
@@ -54,8 +68,9 @@ public class MainSubscribeDetailsActivity extends AppCompatActivity {
 
             }
         }
+
         String service_date = intent.getStringExtra("Date");
-        if(service_date!=null){
+        /*if(service_date!=null){
             if(Integer.parseInt(service_date)>=21&&Integer.parseInt(service_date)<26){
                 date.setTextColor(Color.parseColor("#BA2676"));
             }else if(Integer.parseInt(service_date)>=14){
@@ -69,12 +84,22 @@ public class MainSubscribeDetailsActivity extends AppCompatActivity {
 
             date.setText(service_date);
         }
+*/
+        date.setText(service_date);
 
-
-        findViewById(R.id.btn_subscribe_date).setOnClickListener(new View.OnClickListener() {
+        date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent();
+                new DatePickerDialog(getApplicationContext(),
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                                calendar.set(Calendar.YEAR, year);
+                                calendar.set(Calendar.MONTH, month);
+                                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                                //date.setText(String.format("%d/%d/%d",mYear,mMonth,mDay));
+                            }
+                        }, mYear, mMonth, mDay).show();
             }
         });
 
@@ -88,7 +113,6 @@ public class MainSubscribeDetailsActivity extends AppCompatActivity {
 
 
     }
-
 
 
 }
