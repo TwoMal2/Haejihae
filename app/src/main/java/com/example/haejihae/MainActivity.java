@@ -123,6 +123,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     public void itemAddClick(View v){
         Intent intent = new Intent(this, Items_addActivity.class);
         intent.putExtra("data","Test Popup");
@@ -139,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    public void addItem(String name, String date, String dday){
+    public void addItem(String name, String date, String dday) {
         SubscribeItems item = new SubscribeItems();
 
         item.setName(name);
@@ -162,4 +174,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
+
+
 }

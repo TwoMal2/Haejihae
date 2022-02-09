@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="340dp"
     android:layout_height="570dp"
+    android:onClick="mOnClick_DatePick"
     android:orientation="vertical">
-
 
 
     <LinearLayout
         android:id="@+id/popup"
         android:layout_width="340dp"
         android:layout_height="570dp"
+        android:background="@color/white"
         android:orientation="vertical"
-        android:background="@color/white">
+        android:clickable="false">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,18 +32,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
             android:text="이름"
-            android:textSize="12pt"
-            android:textStyle="bold"
             android:textColor="#5F1E31"
 
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="25dp"/>
+            android:textSize="12pt"
+            android:textStyle="bold" />
 
         <EditText
-            android:layout_gravity="center"
             android:layout_width="260dp"
             android:layout_height="40dp"
+            android:layout_gravity="center"
+
+            android:textSize="10pt"
+            android:maxLength="10"
 
             android:background="@drawable/edittext_rounded_corner_rectangle"
 
@@ -54,23 +59,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
             android:text="결제일"
-            android:textSize="12pt"
-            android:textStyle="bold"
             android:textColor="#5F1E31"
 
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="25dp"/>
+            android:textSize="12pt"
+            android:textStyle="bold" />
 
-        <EditText
-            android:layout_gravity="center"
+        <TextView
+            android:id="@+id/datePickerView"
+
             android:layout_width="260dp"
             android:layout_height="40dp"
+            android:layout_gravity="center"
+
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="10pt"
 
             android:background="@drawable/edittext_rounded_corner_rectangle"
 
 
-            ></EditText>
+            ></TextView>
 
         <TextView
             android:id="@+id/textView4"
@@ -78,36 +89,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
             android:text="구독 기간"
-            android:textSize="12pt"
-            android:textStyle="bold"
             android:textColor="#5F1E31"
 
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="25dp"/>
+            android:textSize="12pt"
+            android:textStyle="bold" />
 
         <EditText
-            android:layout_gravity="center"
+            android:id="@+id/substerm"
             android:layout_width="260dp"
             android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:textSize="10pt"
 
-            android:background="@drawable/edittext_rounded_corner_rectangle"
 
-            ></EditText>
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_rounded_corner_rectangle" />
 
         <Button
             android:id="@+id/btnClose"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:padding="8dp"
 
             android:background="@drawable/button_item_add_close"
 
-            android:textSize="8pt"
-            android:textStyle="bold"
+            android:text="확인"
             android:textColor="@color/white"
-            android:text="확인" />
+            android:textSize="8pt"
+            android:textStyle="bold" />
+
 
 
     </LinearLayout>
