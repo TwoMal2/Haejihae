@@ -92,6 +92,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ImageButton btn_add = findViewById(R.id.btn_add);
 
         ImageButton btn_remove = findViewById(R.id.btn_remove);
+
+        ImageButton btn_alarmSet = findViewById(R.id.btn_alarmSet);
+
         btn_remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +104,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 findViewById(R.id.btn_remove_remove).setVisibility(View.VISIBLE);
                 findViewById(R.id.btn_remove_back).setVisibility(View.VISIBLE);
+
+                /*
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                SubscribeInfoRemoveFragment subscribeInfoRemoveFragment = new SubscribeInfoRemoveFragment();
+                transaction.replace(R.id.layout_subscribe, subscribeInfoRemoveFragment);
+                transaction.commit();*/
+            }
+        });
+
+        btn_alarmSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlarmSetAdapter adapter = new AlarmSetAdapter(myData);
+                recyclerView.setAdapter(adapter);
+
+                findViewById(R.id.btn_alarmSet).setVisibility(View.VISIBLE);
+                findViewById(R.id.btn_alarmSet_back).setVisibility(View.VISIBLE);
 
                 /*
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -120,6 +141,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 findViewById(R.id.btn_remove_back).setVisibility(View.INVISIBLE);
             }
         });
+
+        findViewById(R.id.btn_alarmSet_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData, getApplicationContext());
+                recyclerView.setAdapter(adapter);
+
+                findViewById(R.id.btn_alarmSet_back).setVisibility(View.INVISIBLE);
+            }
+        });
+
 
     }
 
