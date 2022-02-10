@@ -21,7 +21,9 @@
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/rectangle_ticket.xml" value="0.378125" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/drawable/rectangle_ticket_dotted_line.xml" value="0.29635416666666664" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_alarm_set.xml" value="0.3619791666666667" />
-        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_items_add.xml" value="0.25" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_calendar.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_date_picker.xml" value="0.33" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_items_add.xml" value="0.33" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_loading.xml" value="0.25" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_main.xml" value="0.33" />
@@ -30,6 +32,7 @@
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_menu.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_subscribe_information_remove.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_welcome.xml" value="0.22" />
+        <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/fragment_date_picker.xml" value="0.24635416666666668" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/fragment_subscribe_info.xml" value="0.20208333333333334" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/profile_header.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/bibic/AndroidStudioProjects/Haejihae/app/src/main/res/layout/subscribe_items.xml" value="0.3619791666666667" />

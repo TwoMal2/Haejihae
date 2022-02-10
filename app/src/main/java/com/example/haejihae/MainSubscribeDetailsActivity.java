@@ -85,22 +85,24 @@ public class MainSubscribeDetailsActivity extends AppCompatActivity {
             date.setText(service_date);
         }
 */
-        date.setText(service_date);
 
+        //데베에 날짜 저장하는 코드 추가
         date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DatePickerDialog(getApplicationContext(),
+                new DatePickerDialog(MainSubscribeDetailsActivity.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
-                                calendar.set(Calendar.YEAR, year);
-                                calendar.set(Calendar.MONTH, month);
-                                calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                                //date.setText(String.format("%d/%d/%d",mYear,mMonth,mDay));
+                                //calendar.set(Calendar.YEAR, year);
+                                //calendar.set(Calendar.MONTH, month);
+                                //calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                                date.setText(String.format("%d/%d/%d",year,month+1,dayOfMonth));
                             }
                         }, mYear, mMonth, mDay).show();
+
             }
+
         });
 
         findViewById(R.id.iv_back).setOnClickListener(new View.OnClickListener() {
