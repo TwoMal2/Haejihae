@@ -95,7 +95,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/alarm_btn"
+        android:id="@+id/alarm_set_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="start|center"

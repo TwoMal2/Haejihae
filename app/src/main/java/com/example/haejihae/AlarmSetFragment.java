@@ -1,5 +1,6 @@
 package com.example.haejihae;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 public class AlarmSetFragment extends Fragment {
 
     ArrayList<SubscribeItems> myData;
+    Context mContext;
 
     @Nullable
     @Override
@@ -29,13 +31,14 @@ public class AlarmSetFragment extends Fragment {
         addItem("Netflix","2022/02/08","31");
         addItem("Waave","2012/03/13","1");
 
-        RecyclerView recyclerView = view.findViewById(R.id.rv_subscribe_items);
+        RecyclerView recyclerView = view.findViewById(R.id.rv_subscribe_alarm_set_items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        SubscribeItemsRemoveAdapter adapter = new SubscribeItemsRemoveAdapter(myData);
+        AlarmSetAdapter adapter = new AlarmSetAdapter(myData, mContext);
         recyclerView.setAdapter(adapter);
 
         Button btn_remove_back = view.findViewById(R.id.btn_remove_back);
+
         btn_remove_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
