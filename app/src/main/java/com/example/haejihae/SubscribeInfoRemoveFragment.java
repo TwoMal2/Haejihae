@@ -32,7 +32,7 @@ public class SubscribeInfoRemoveFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.rv_subscribe_remove_items);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
-        SubscribeItemsRemoveAdapter adapter = new SubscribeItemsRemoveAdapter(myData);
+        SubscribeItemsRemoveAdapter adapter = new SubscribeItemsRemoveAdapter(myData, getContext());
         recyclerView.setAdapter(adapter);
 
         Button btn_remove_back = view.findViewById(R.id.btn_remove_back);

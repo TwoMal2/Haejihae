@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
 
-                SubscribeItemsRemoveAdapter adapter = new SubscribeItemsRemoveAdapter(myData);
+                SubscribeItemsRemoveAdapter adapter = new SubscribeItemsRemoveAdapter(myData, getApplicationContext());
                 recyclerView.setAdapter(adapter);
 
                 findViewById(R.id.btn_remove_remove).setVisibility(View.VISIBLE);
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void itemAddClick(View v){
-        Intent intent = new Intent(this, Items_addActivity.class);
+        Intent intent = new Intent(this, ImagesAddActivity.class);
         intent.putExtra("data","Test Popup");
         startActivityForResult(intent, 1);
     }

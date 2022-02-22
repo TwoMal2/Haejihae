@@ -112,6 +112,14 @@ public class MainSubscribeDetailsActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.iv_help).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(MainSubscribeDetailsActivity.this, CancelManualActivity.class);
+                startActivity(intent1);
+            }
+        });
+
 
 
     }
