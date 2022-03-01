@@ -26,165 +26,122 @@
 
     <LinearLayout
         android:layout_width="303dp"
-        android:layout_height="88dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/round_corner_pink_textbox"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/Name"
-
-            android:layout_width="152dp"
+        <LinearLayout
+            android:layout_width="303dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="10dp"
-            android:text="Name"
+            <TextView
+                android:id="@+id/Name"
 
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#5F1E31"
-            android:textSize="48sp"
-            android:textStyle="bold" />
+                android:layout_width="152dp"
+                android:layout_height="53dp"
 
-        <TextView
-            android:id="@+id/DDay"
-            android:layout_width="112dp"
-            android:layout_height="56dp"
-            android:text="DDay"
-            android:textAlignment="textEnd"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#E62E68"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="Name"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#5F1E31"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:text="D-"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#E62E68"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/DDay"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:text="N"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#E62E68"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 다음결제일-->
+        <LinearLayout
+            android:layout_width="303dp"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/next_payday"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:text="다음 결제일 : "
+                android:textColor="#5F1E31"
+
+                android:textSize="8pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/npday"
+
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:text="2000/00/00"
+                android:textAlignment="textStart"
+
+                android:textColor="#5F1E31"
+                android:textSize="8pt"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <!--구독일-->
-    <LinearLayout
-        android:layout_width="303dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
-
-        <TextView
-            android:id="@+id/subscribe_day"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:text="구독일"
-            android:textAlignment="viewStart"
-
-            android:textColor="#5F1E31"
-            android:textSize="9pt"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/sday"
-
-            android:layout_width="179dp"
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:text="Date"
-            android:textAlignment="textEnd"
-
-            android:textColor="#D53C69"
-            android:textSize="9pt"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <!-- 다음결제일-->
-    <LinearLayout
-        android:layout_width="303dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
-
-        <TextView
-            android:id="@+id/next_payday"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:text="다음 결제일"
-            android:textColor="#5F1E31"
-
-            android:textSize="9pt"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/npday"
-
-            android:layout_width="131dp"
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:text="Date"
-            android:textAlignment="textEnd"
-
-            android:textColor="#D53C69"
-            android:textSize="9pt"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <!--세로 선-->
-    <View
-        android:layout_width="287dp"
-        android:layout_height="1dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="30dp"
-        android:background="#C30941" />
 
     <!--날짜-->
+
     <LinearLayout
         android:layout_width="303dp"
-        android:layout_height="60dp"
+        android:layout_height="57dp"
         android:layout_gravity="center"
         android:orientation="horizontal">
 
         <TextView
             android:id="@+id/alarm_date"
 
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
 
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:text="날짜"
             android:textColor="#5F1E31"
 
             android:textSize="9pt"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/adate"
+        <Spinner
+            android:id="@+id/date_spinner"
 
-            android:layout_width="164dp"
+            android:layout_width="194dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:text="1일전"
-            android:textAlignment="textEnd"
-
-            android:textColor="#D53C69"
-            android:textSize="9pt"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_baseline_keyboard_arrow_down"
-            app:tint="#C30941" />
+            android:layout_marginTop="20dp" />
 
     </LinearLayout>
 
@@ -198,7 +155,7 @@
         <TextView
             android:id="@+id/alarm_time"
 
-            android:layout_width="wrap_content"
+            android:layout_width="49dp"
             android:layout_height="wrap_content"
 
             android:layout_marginLeft="25dp"
@@ -210,41 +167,49 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/atime"
-
-            android:layout_width="164dp"
+            android:id="@+id/textView1"
+            android:layout_width="113dp"
             android:layout_height="wrap_content"
-
-            android:layout_marginLeft="25dp"
+            android:layout_below="@+id/button1"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:text="12:00 AM"
-            android:textAlignment="textEnd"
-
-            android:textColor="#D53C69"
+            android:text ="0 : 0"
+            android:textColor="#5F1E31"
             android:textSize="9pt"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textAlignment="textEnd"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_baseline_keyboard_arrow_down"
-            app:tint="#C30941" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="69dp"
+            android:layout_height="36dp"
+            android:layout_below="@+id/timePicker1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="설정" />
+</LinearLayout>
 
-    </LinearLayout>
-
-    <!--다시알림-->
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="210dp"
+        android:layout_height="81dp"
+        android:layout_marginLeft="100dp"
+        android:background="#D53C69"
+        android:timePickerMode="spinner" />
 
     <LinearLayout
-        android:layout_width="302dp"
+        android:layout_width="320dp"
         android:layout_height="58dp"
         android:orientation="horizontal">
 
+        <!--다시알림-->
         <TextView
-            android:layout_width="98dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="140dp"
             android:text="다시알림"
             android:textAlignment="textEnd"
 
@@ -252,14 +217,9 @@
             android:textSize="9pt"
             android:textStyle="bold" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
-
         <ToggleButton
             android:id="@+id/alarm_re"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|right"
             android:textOff="Off"
@@ -278,26 +238,12 @@
         android:layout_height="28dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/art"
+        <Spinner
+            android:id="@+id/re_time_spinner"
 
-            android:layout_width="30dp"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
-
-            android:text="2"
-            android:textAlignment="textEnd"
-
-            android:textColor="#D53C69"
-            android:textSize="8pt"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:src="@drawable/ic_baseline_keyboard_arrow_down"
-            app:tint="#C30941" />
+            android:layout_marginLeft="25px"/>
 
         <TextView
             android:id="@+id/alarm_re_time"
@@ -311,26 +257,11 @@
             android:textSize="8pt"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/arh"
+        <Spinner
+            android:id="@+id/re_time2_spinner"
 
-            android:layout_width="67dp"
-            android:layout_height="wrap_content"
-
-            android:layout_marginLeft="25dp"
-            android:text="1시간"
-            android:textAlignment="textEnd"
-
-            android:textColor="#D53C69"
-            android:textSize="8pt"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:src="@drawable/ic_baseline_keyboard_arrow_down"
-            app:tint="#C30941" />
+            android:layout_width="115dp"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/alarm_re_hour"
@@ -369,6 +300,12 @@
         android:layout_gravity="right"
         app:srcCompat="@drawable/ic_baseline_close_red"
         android:layout_marginRight="25dp"/>
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="14dp"
+        android:layout_weight="1" />
 
 
 </LinearLayout>

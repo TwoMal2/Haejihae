@@ -3,5 +3,29 @@
     <string name="navigation_drawer_open">Open navigation drawer </string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="day">
+        <item>1일전</item>
+        <item>2일전</item>
+        <item>3일전</item>
+    </string-array>
+
+    <string-array name="time">
+        <item>00:00AM</item>
+        <item>01:00AM</item>
+        <item>02:00AM</item>
+    </string-array>
+
+    <string-array name="re_t">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="re_t2">
+        <item>10분</item>
+        <item>30분</item>
+        <item>1시간</item>
+        <item>3시간</item>
+        <item>6시간</item>
+    </string-array>
 </resources>

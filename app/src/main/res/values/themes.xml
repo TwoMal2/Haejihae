@@ -30,4 +30,11 @@
         <item name="android:windowBackground">@color/dialogColor</item>
         <item name="android:colorBackgroundCacheHint">@null</item>
     </style>
+
+    <!--스피너 테마-->
+    <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView" >
+        <item name="android:textSize" >9pt</item>
+        <item name="android:textStyle" >bold</item>
+        <item name="android:textColor">#D53C69</item>
+    </style>
 </resources>

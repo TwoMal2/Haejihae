@@ -37,6 +37,7 @@ public class AlarmSetAdapter extends RecyclerView.Adapter<AlarmSetAdapter.ViewHo
 
                         intent.putExtra("Service name",tv_service_name.getText().toString());
                         intent.putExtra("Date", tv_date.getText().toString());
+                        intent.putExtra("DDay", tv_dday.getText().toString());
 
                         mContext.startActivity(intent);
                     }
