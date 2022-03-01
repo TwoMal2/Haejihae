@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".CancelManualActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".CancelManualActivity">
 
     <!--타이틀 바-->
 
@@ -22,7 +22,7 @@
             android:layout_gravity="start"
             android:layout_marginEnd="20dp"
             android:background="#00FFFFFF"
-            android:src="@drawable/ic_baseline_close_red"
+            android:src="@drawable/ic_round_close_red"
             app:tint="#C30941" />
 
         <TextView
@@ -52,99 +52,117 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_netflix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="넷플릭스"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
             <Button
+                android:id="@+id/btn_tving"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="티빙"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
 
             <Button
+                android:id="@+id/btn_wavve"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="웨이브"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
             <Button
+                android:id="@+id/btn_watcha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="왓차"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
 
             <Button
+                android:id="@+id/btn_disney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="디즈니 플러스"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
 
             <Button
+                android:id="@+id/btn_utube"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="유튜브 프리미엄"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
 
             <Button
+                android:id="@+id/btn_melon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="멜론"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
 
             <Button
+                android:id="@+id/btn_bugs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="벅스"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
 
             <Button
+                android:id="@+id/btn_flo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_manual"
+                android:background="@drawable/button_manual_selector"
+                android:onClick="btnClick"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:text="플로"
-                android:textColor="#FF7870"
+                android:textColor="@drawable/button_manual_text_selector"
                 android:textSize="18sp" />
 
         </LinearLayout>
@@ -152,10 +170,10 @@
     </HorizontalScrollView>
 
     <LinearLayout
+        android:id="@+id/layout_manual"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
 
 
     </LinearLayout>

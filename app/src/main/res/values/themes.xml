@@ -31,6 +31,13 @@
         <item name="android:colorBackgroundCacheHint">@null</item>
     </style>
 
+    <style name="PopUpDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+
     <!--스피너 테마-->
     <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView" >
         <item name="android:textSize" >9pt</item>

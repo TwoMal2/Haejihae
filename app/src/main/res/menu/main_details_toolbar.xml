@@ -3,11 +3,11 @@
     <item
         android:title="뒤로 가기"
         android:id="@+id/back_button"
-        android:icon="@drawable/ic_baseline_arrow_back"
+        android:icon="@drawable/ic_round_arrow_back"
         />
     <item
         android:title="도움말"
         android:id="@+id/help_button"
-        android:icon="@drawable/ic_baseline_help_outline"
+        android:icon="@drawable/ic_round_help_outline"
         />
 </menu>

@@ -32,9 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".CancelManualActivity" />
-
+        <activity android:name=".AlarmListActivity" />
 
         <!-- 팝업 Activity -->
         <activity
@@ -42,7 +41,11 @@
             android:exported="false"
             android:theme="@android:style/Theme.Dialog"
             android:windowSoftInputMode="adjustResize" />
-
+        <activity
+            android:name=".ImagesAddActivity"
+            android:exported="false"
+            android:theme="@style/PopUpDialog"
+            android:windowSoftInputMode="adjustResize"/>
     </application>
 
 </manifest>
