@@ -77,6 +77,31 @@
         <entry key="..\:/Users/x__x73/AndroidStudioProjects/Haejihae/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_main_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main_subscribe_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/activity_pop_calendar.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_popup_calendar.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/activity_subscribe_cancel.xml" value="0.20923913043478262" />
+        <entry key="app/src/main/res/layout/activity_subscribe_cancel_manual.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_subscribe_information_remove.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/activity_subscribe_main.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.1458966565349544" />
+        <entry key="app/src/main/res/layout/alarm_date.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/alarm_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_alarm_set_main.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/fragment_manual_bugs.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_manual_disney.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_manual_flo.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_manual_melon.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_manual_netflix.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/fragment_manual_tving.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_manual_watcha.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_manual_wavve.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_manual_youtube.xml" value="0.1802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_sub_scribe_info_main.xml" value="0.2259963768115942" />
+        <entry key="app/src/main/res/layout/service_list.xml" value="0.20923913043478262" />
+        <entry key="app/src/main/res/layout/subscribe_items.xml" value="0.16894630192502533" />
+        <entry key="app/src/main/res/layout/subscribe_items_remove.xml" value="0.16894630192502533" />
         <entry key="app/src/main/res/menu/main_detail_toolbar.xml" value="0.19270833333333334" />
         <entry key="app/src/main/res/menu/main_details_toolbar.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main_toolbar.xml" value="0.19270833333333334" />
