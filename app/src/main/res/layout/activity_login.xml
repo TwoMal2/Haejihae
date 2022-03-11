@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="131dp"
+        android:layout_height="180dp"
         android:orientation="vertical">
 
         <ImageView
@@ -17,12 +17,107 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             app:srcCompat="@drawable/logo" />
+
+        <!--세로 선-->
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#C30941" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="305dp"
+        android:layout_height="166dp"
+        android:layout_gravity="center"
         android:orientation="vertical"
 
-        ></LinearLayout>
+        >
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="#F4F1F0"
+            android:ems="10"
+            android:hint="아이디"
+            android:inputType="textPersonName"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4F1F0"
+            android:ems="10"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/go_login"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_login_red"
+
+        android:text="로그인"
+        android:textColor="#FFFFFF "
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/findId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="아이디 찾기"
+            android:textColor="#C30941" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="|"
+            android:textColor="#C30941" />
+
+        <TextView
+            android:id="@+id/findPw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="비밀번호 찾기"
+            android:textColor="#C30941" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="|"
+            android:textColor="#C30941" />
+
+        <TextView
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="회원가입"
+            android:textColor="#C30941" />
+
+    </LinearLayout>
+
+
 </LinearLayout>
