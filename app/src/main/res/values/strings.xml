@@ -3,6 +3,13 @@
     <string name="navigation_drawer_open">Open navigation drawer </string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="sortBy">
+        <item>디데이 오름차순</item>
+        <item>디데이 내림차순</item>
+        <item>이름순</item>
+    </string-array>
     <string-array name="day">
         <item>1일전</item>
         <item>2일전</item>

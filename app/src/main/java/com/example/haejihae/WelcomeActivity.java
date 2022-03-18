@@ -12,6 +12,11 @@ public class WelcomeActivity extends AppCompatActivity {
     TextView text;
 
     @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);

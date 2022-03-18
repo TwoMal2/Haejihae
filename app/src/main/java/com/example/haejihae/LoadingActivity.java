@@ -5,8 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Window;
 
 public class LoadingActivity extends Activity {
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +27,8 @@ public class LoadingActivity extends Activity {
         }, 3000);  //화면 전환에 소요되는 시간
 
     }
+
+
 
 
 }

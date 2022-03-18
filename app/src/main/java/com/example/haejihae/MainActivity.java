@@ -1,9 +1,16 @@
 package com.example.haejihae;
 
+import static androidx.navigation.ui.NavigationUI.*;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,14 +19,20 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -31,8 +44,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Spinner spinner = findViewById(R.id.sortSpinner);
+        ArrayAdapter<CharSequence> sortAdapter = ArrayAdapter.createFromResource(this, R.array.sortBy, android.R.layout.simple_spinner_item);
+        sortAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(sortAdapter);
+        spinner.setOnItemSelectedListener(this);
+
+
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
+        //toolbar = findViewById(R.id.main_toolbar);
+
+        //setSupportActionBar(toolbar);
 
         //로그인 로그아웃 둘 중 하나는 숨기기
         Menu menu = navigationView.getMenu();
@@ -40,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         navigationView.bringToFront();
+        //ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        //drawerLayout.addDrawerListener(toggle);
+        //toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -57,15 +83,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerView.setAdapter(adapter);
 
 
-        findViewById(R.id.iv_menu).setOnClickListener(new View.OnClickListener(){
+
+        findViewById(R.id.iv_menu).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
 
 
-        findViewById(R.id.iv_notifications).setOnClickListener(new View.OnClickListener(){
+        findViewById(R.id.iv_notifications).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(), AlarmListActivity.class);
@@ -164,8 +191,86 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        RecyclerView recyclerView = findViewById(R.id.rv_subscribe_items);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+        SubscribeItemsAdapter adapter = new SubscribeItemsAdapter(myData, getApplicationContext());
+
+        switch(i){
+            case 0:
+                AscendingObj ascending = new AscendingObj();
+                Collections.sort(myData, ascending);
+
+                recyclerView.setAdapter(adapter);
+
+                break;
+
+            case 1:
+                DescendingObj descending = new DescendingObj();
+                Collections.sort(myData, descending);
+
+                recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+                recyclerView.setAdapter(adapter);
+                break;
+
+
+            case 2:
+                SortByNameObj sortByName = new SortByNameObj();
+                Collections.sort(myData, sortByName);
+
+                recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+                recyclerView.setAdapter(adapter);
+                break;
 
 
 
+        }
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
+
+    class AscendingObj implements Comparator<SubscribeItems> {
+        @Override
+        public int compare(SubscribeItems o1, SubscribeItems o2) {
+            return o1.getDday().compareTo(o2.getDday());
+        }
+    }
+
+    class DescendingObj implements Comparator<SubscribeItems> {
+        @Override
+        public int compare(SubscribeItems o1, SubscribeItems o2) {
+            return o2.getDday().compareTo(o1.getDday());
+        }
+    }
+
+    class SortByNameObj implements Comparator<SubscribeItems> {
+        @Override
+        public int compare(SubscribeItems o1, SubscribeItems o2) {
+            return o1.getName().compareTo(o2.getName());
+        }
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
+
+
+
+}
 
 }

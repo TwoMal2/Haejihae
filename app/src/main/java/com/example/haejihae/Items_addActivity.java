@@ -48,9 +48,9 @@ public class Items_addActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_items_add);
 
-        getWindow().setBackgroundDrawable(new PaintDrawable(Color.TRANSPARENT));
+        //getWindow().setBackgroundDrawable(new PaintDrawable(Color.TRANSPARENT));
 
-        TextView et_Date = (TextView) findViewById(R.id.datePickerView);
+        Button et_Date = (Button) findViewById(R.id.datePickerView);
         et_Date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +74,7 @@ public class Items_addActivity extends Activity {
         });
 
     }
+
 
 
 

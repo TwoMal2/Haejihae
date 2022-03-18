@@ -41,9 +41,9 @@
         <!-- 팝업 Activity -->
         <activity
             android:name=".Items_addActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@android:style/Theme.Dialog"
-            android:windowSoftInputMode="adjustResize" />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ImagesAddActivity"
             android:exported="false"
